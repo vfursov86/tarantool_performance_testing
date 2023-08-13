@@ -33,9 +33,9 @@ services:
           return "Hello from Tarantool"
         end
         
-        function insert(request)
-          box.space.testbase:insert{2, "Roxette", 1986}
-          return "Entry Roxette 2 added"
+        function insert(req, ...)
+          box.space.testbase:insert{tonumber(req.args.id), req.args.bandname, tonumber(req.args.year)}
+          return 200
         end
         
       EON
@@ -73,7 +73,7 @@ services:
               
               location /insert {
                   tnt_http_rest_methods get post put delete;
-                  tnt_pass_http_request on;
+                  tnt_pass_http_request on parse_args;
                   tnt_pure_result on;
                   tnt_pass backend;
                   add_header Content-Type text/plain;
