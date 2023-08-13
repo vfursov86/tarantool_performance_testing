@@ -1,0 +1,12 @@
+Tarantool Nginx upstream module is a collective effort, and incorporates
+many contributions from the community.
+
+Below follows a list of people, who contributed their code.
+
+Vasily Soshnikov, Andrew Drozdow, E. Blih, Konstantin Osipov, Valery Kholodkov,
+Yichun Zhang (valgrind suppess, debug.h), Alex Turenko
+
+Tarantool pefromance testing project was created by Viktor Fursov.
+
+NOTE: If you can commit a change to this list, please do not hesitate
+to add your name to it.
